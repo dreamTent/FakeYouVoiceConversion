@@ -36,8 +36,8 @@ if (await client.Login("username/email", "password")){
     byte[] resultBytes = await client.MakeVoiceConversion("weight_4c230zwawr3dm0jqcce16xtvf", fileBytes);
 }
 ````
-The login function returns true if the login was successfull or the user was already logged in.
-It returns false if the login was unsucessfull.
+The login function returns true if the login was successful or the user was already logged in.
+It returns false if the login was unsuccessful.
 
 ## Logout
 If you have logged in, don't forget to logout!
@@ -45,4 +45,10 @@ You can do that simply by calling Logout()
 ````c#
 await client.Logout();
 ````
-If the logout was sucessfull it returns true, else it returns false
+If the logout was successful it returns true, else it returns false
+
+
+# Special Considerations
+As default when you create a ````Client```` with ````new Client()```` it will try to start an Http Client with IPv4, that is because at the time of writing this library, the IPv6 addresses dont seem to work.
+
+If you want to use the standard settings of your Computer use ````new Client(false)```` that way it will not forcefully try to start a Http Client with IPv4, and instead use whatever the default settings are.
