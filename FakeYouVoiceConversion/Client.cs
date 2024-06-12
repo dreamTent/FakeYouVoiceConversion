@@ -73,7 +73,7 @@ namespace FakeYouVoiceConversion
         /// <returns>If successfull returns true, else returns false</returns>
         public async Task<bool> Login(string usernameOrEmail, string password)
         {
-            if (sessionToken == "") throw new Exception("already logged in");
+            if (sessionToken != "") return true;
             string requestUri = $"https://api.fakeyou.com/login";
 
             //build messages
