@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageId>dreamTent.FakeYou.VoiceConversion</PackageId>
+    <PackageId>FakeYou.VoiceConversion</PackageId>
     <Title>FakeYou Voice Conversion</Title>
     <Authors>dreamTent</Authors>
     <Company>dreamTent</Company>
@@ -16,6 +16,14 @@ Also supports login/logout to be able to use premium features</Description>
     <RepositoryUrl>https://github.com/dreamTent/FakeYouVoiceConversion</RepositoryUrl>
     <PackageProjectUrl>https://github.com/dreamTent/FakeYouVoiceConversion</PackageProjectUrl>
     <PackageReleaseNotes>First release</PackageReleaseNotes>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
