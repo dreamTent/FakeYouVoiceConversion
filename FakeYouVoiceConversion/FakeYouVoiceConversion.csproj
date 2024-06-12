@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>dreamTent.FakeYou.VoiceConversion</PackageId>
+    <Title>FakeYou Voice Conversion</Title>
+    <Authors>dreamTent</Authors>
+    <Company>dreamTent</Company>
+    <Product>FakeYou Voice Conversion</Product>
+    <Description>A Library to use FakeYou Voice conversion.
+Also supports login/logout to be able to use premium features</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/dreamTent/FakeYouVoiceConversion</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/dreamTent/FakeYouVoiceConversion</PackageProjectUrl>
+    <PackageReleaseNotes>First release</PackageReleaseNotes>
+  </PropertyGroup>
+
+</Project>
