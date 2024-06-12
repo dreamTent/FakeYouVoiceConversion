@@ -1,5 +1,11 @@
 # FakeYouVoiceConversion
-A c# .net library for communicating with the FakeYou Voice Conversion api
+FakeYouVoiceConversion is a c# .net library for easily communicating with the FakeYou Voice Conversion api.
+
+# Installation
+FakeYouVoiceConversion is available as NuGet package.
+````
+Install-Package FakeYou.VoiceConversion
+````
 
 # Example Usage
 ## Get Voice Conversion Models List
@@ -8,7 +14,7 @@ Client client = new Client();
 List<Model> result = await client.GetVoiceList();
 ````
 
-Model Variables
+Model Variables:
 
 | Variable Name                 | Type       |
 |-------------------------------|------------|
@@ -25,7 +31,10 @@ Model Variables
 
 
 ## Voice Conversion
-To convert the audio you need to give following to the MakeVoiceConversion function: the **Token** of the model, and a byte[] that holds your audio.
+Parse the following to the **MakeVoiceConversion** function to do an audio to audio conversion:
+
+The **Token** of the model, and a **byte[]** that holds your audio.
+
 In this example i am using "weight_4c230zwawr3dm0jqcce16xtvf" which is the voice of WeirdAl.
 ````c#
 Client client = new Client();
