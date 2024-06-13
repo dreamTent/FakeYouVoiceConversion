@@ -46,10 +46,18 @@
             Destination_label = new Label();
             panel2 = new Panel();
             Voices_listView = new ListView();
+            TItle = new ColumnHeader();
+            Creator = new ColumnHeader();
+            Token = new ColumnHeader();
             label5 = new Label();
             SelectedVoiceToken_textBox = new TextBox();
             label6 = new Label();
             label7 = new Label();
+            Search_textBox = new TextBox();
+            label8 = new Label();
+            comboBox1 = new ComboBox();
+            textBox1 = new TextBox();
+            label9 = new Label();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
@@ -58,12 +66,12 @@
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Location = new Point(181, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1, 428);
+            panel1.Size = new Size(1, 510);
             panel1.TabIndex = 0;
             // 
             // SelectFiles_button
             // 
-            SelectFiles_button.Location = new Point(570, 215);
+            SelectFiles_button.Location = new Point(681, 215);
             SelectFiles_button.Name = "SelectFiles_button";
             SelectFiles_button.Size = new Size(75, 23);
             SelectFiles_button.TabIndex = 1;
@@ -72,7 +80,7 @@
             // 
             // SetDestinationFolder_button
             // 
-            SetDestinationFolder_button.Location = new Point(651, 215);
+            SetDestinationFolder_button.Location = new Point(762, 215);
             SetDestinationFolder_button.Name = "SetDestinationFolder_button";
             SetDestinationFolder_button.Size = new Size(139, 23);
             SetDestinationFolder_button.TabIndex = 2;
@@ -81,7 +89,7 @@
             // 
             // Start_button
             // 
-            Start_button.Location = new Point(796, 215);
+            Start_button.Location = new Point(907, 215);
             Start_button.Name = "Start_button";
             Start_button.Size = new Size(75, 23);
             Start_button.TabIndex = 3;
@@ -92,7 +100,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(567, 248);
+            label1.Location = new Point(678, 248);
             label1.Name = "label1";
             label1.Size = new Size(157, 15);
             label1.TabIndex = 4;
@@ -101,7 +109,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(801, 248);
+            label2.Location = new Point(912, 248);
             label2.Name = "label2";
             label2.Size = new Size(53, 15);
             label2.TabIndex = 5;
@@ -109,7 +117,7 @@
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(730, 246);
+            numericUpDown1.Location = new Point(841, 246);
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(65, 23);
             numericUpDown1.TabIndex = 6;
@@ -167,15 +175,15 @@
             // Log_textBox
             // 
             Log_textBox.AcceptsReturn = true;
-            Log_textBox.Location = new Point(570, 275);
+            Log_textBox.Location = new Point(681, 304);
             Log_textBox.Multiline = true;
             Log_textBox.Name = "Log_textBox";
-            Log_textBox.Size = new Size(301, 165);
+            Log_textBox.Size = new Size(301, 218);
             Log_textBox.TabIndex = 13;
             // 
             // Files_listView
             // 
-            Files_listView.Location = new Point(570, 30);
+            Files_listView.Location = new Point(681, 30);
             Files_listView.Name = "Files_listView";
             Files_listView.Size = new Size(301, 162);
             Files_listView.TabIndex = 14;
@@ -184,7 +192,7 @@
             // Destination_label
             // 
             Destination_label.AutoSize = true;
-            Destination_label.Location = new Point(570, 195);
+            Destination_label.Location = new Point(681, 195);
             Destination_label.Name = "Destination_label";
             Destination_label.Size = new Size(70, 15);
             Destination_label.TabIndex = 15;
@@ -193,23 +201,43 @@
             // panel2
             // 
             panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Location = new Point(563, 12);
+            panel2.Location = new Point(674, 12);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1, 428);
+            panel2.Size = new Size(1, 510);
             panel2.TabIndex = 1;
             // 
             // Voices_listView
             // 
-            Voices_listView.Location = new Point(188, 30);
+            Voices_listView.Columns.AddRange(new ColumnHeader[] { TItle, Creator, Token });
+            Voices_listView.FullRowSelect = true;
+            Voices_listView.GridLines = true;
+            Voices_listView.Location = new Point(188, 83);
             Voices_listView.Name = "Voices_listView";
-            Voices_listView.Size = new Size(369, 359);
+            Voices_listView.Size = new Size(480, 388);
             Voices_listView.TabIndex = 16;
             Voices_listView.UseCompatibleStateImageBehavior = false;
+            Voices_listView.View = View.Details;
+            Voices_listView.MouseDoubleClick += Voices_listView_MouseDoubleClick;
+            // 
+            // TItle
+            // 
+            TItle.Text = "Title";
+            TItle.Width = 250;
+            // 
+            // Creator
+            // 
+            Creator.Text = "Creator";
+            Creator.Width = 100;
+            // 
+            // Token
+            // 
+            Token.Text = "Token";
+            Token.Width = 120;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(188, 12);
+            label5.Location = new Point(188, 65);
             label5.Name = "label5";
             label5.Size = new Size(43, 15);
             label5.TabIndex = 17;
@@ -217,15 +245,15 @@
             // 
             // SelectedVoiceToken_textBox
             // 
-            SelectedVoiceToken_textBox.Location = new Point(188, 417);
+            SelectedVoiceToken_textBox.Location = new Point(188, 499);
             SelectedVoiceToken_textBox.Name = "SelectedVoiceToken_textBox";
-            SelectedVoiceToken_textBox.Size = new Size(369, 23);
+            SelectedVoiceToken_textBox.Size = new Size(480, 23);
             SelectedVoiceToken_textBox.TabIndex = 19;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(188, 399);
+            label6.Location = new Point(188, 481);
             label6.Name = "label6";
             label6.Size = new Size(119, 15);
             label6.TabIndex = 18;
@@ -234,17 +262,63 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(570, 12);
+            label7.Location = new Point(681, 12);
             label7.Name = "label7";
             label7.Size = new Size(33, 15);
             label7.TabIndex = 20;
             label7.Text = "Files:";
             // 
+            // Search_textBox
+            // 
+            Search_textBox.Location = new Point(188, 30);
+            Search_textBox.Name = "Search_textBox";
+            Search_textBox.Size = new Size(480, 23);
+            Search_textBox.TabIndex = 22;
+            Search_textBox.TextChanged += Search_textBox_TextChanged;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(188, 12);
+            label8.Name = "label8";
+            label8.Size = new Size(45, 15);
+            label8.TabIndex = 21;
+            label8.Text = "Search:";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(861, 275);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 23;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(724, 275);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(74, 23);
+            textBox1.TabIndex = 24;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(681, 279);
+            label9.Name = "label9";
+            label9.Size = new Size(37, 15);
+            label9.TabIndex = 25;
+            label9.Text = "Pitch:";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(880, 452);
+            ClientSize = new Size(994, 534);
+            Controls.Add(label9);
+            Controls.Add(textBox1);
+            Controls.Add(comboBox1);
+            Controls.Add(Search_textBox);
+            Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(SelectedVoiceToken_textBox);
             Controls.Add(label6);
@@ -299,5 +373,13 @@
         private TextBox SelectedVoiceToken_textBox;
         private Label label6;
         private Label label7;
+        private TextBox Search_textBox;
+        private Label label8;
+        private ColumnHeader TItle;
+        private ColumnHeader Creator;
+        private ColumnHeader Token;
+        private ComboBox comboBox1;
+        private TextBox textBox1;
+        private Label label9;
     }
 }
