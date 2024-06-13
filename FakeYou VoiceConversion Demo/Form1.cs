@@ -1,7 +1,7 @@
-using FakeYouVoiceConversion;
 using System.Diagnostics;
+using FakeYouVoiceConversion;
 
-namespace FakeYou_VoiceConversion_WinForm_Test
+namespace FakeYou_VoiceConversion_Demo
 {
     public partial class Form1 : Form
     {
@@ -10,10 +10,8 @@ namespace FakeYou_VoiceConversion_WinForm_Test
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Start_button_Click(object sender, EventArgs e)
         {
-            
-
             Task.Run(async () =>
             {
                 //read file

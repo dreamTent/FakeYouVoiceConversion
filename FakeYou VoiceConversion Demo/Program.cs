@@ -1,4 +1,4 @@
-namespace FakeYou_VoiceConversion_WinForm_Test
+namespace FakeYou_VoiceConversion_Demo
 {
     internal static class Program
     {
