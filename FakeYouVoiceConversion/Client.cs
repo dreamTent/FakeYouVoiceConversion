@@ -16,6 +16,12 @@ namespace FakeYouVoiceConversion
     {
         private HttpClient httpClient;
         private string sessionToken = "";
+
+        public string SessionToken
+        {
+            get { return sessionToken; }
+            set { sessionToken = value; }
+        }
         //------------------------- Initialisation ------------------------- 
         /// <summary>
         /// Creates a Client and initiates the socket with ipv4
@@ -186,11 +192,9 @@ namespace FakeYouVoiceConversion
                         }
                         catch (NullReferenceException ex)
                         {
-
                         }
                         catch (Exception ex)
                         {
-
                         }
                     }
                     else
